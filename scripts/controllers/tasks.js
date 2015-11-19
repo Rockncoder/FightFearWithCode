@@ -1,21 +1,26 @@
 (function () {
   'use strict';
 
-  angular.module('todoApp').controller('TasksController', function ($scope, localStorageService) {
+  angular.module('todoApp').controller('TasksController', TasksController);
+  TasksController.$inject = ['localStorageService'];
+
+  function TasksController(localStorageService) {
+    var vm = this;
+
     var tasksConstant = 'tasks';
     var tasksStorage = localStorageService.get(tasksConstant);
-    $scope.tasks = tasksStorage || [];
+    vm.tasks = tasksStorage || [];
 
-    $scope.addTask = function () {
-      $scope.tasks.push($scope.task);
-      $scope.task = '';
-      localStorageService.set(tasksConstant, $scope.tasks);
+    vm.addTask = function () {
+      vm.tasks.push(vm.task);
+      vm.task = '';
+      localStorageService.set(tasksConstant, vm.tasks);
     };
 
-    $scope.removeTask = function (index) {
-      $scope.tasks.splice(index, 1);
-      localStorageService.set(tasksConstant, $scope.tasks);
+    vm.removeTask = function (index) {
+      vm.tasks.splice(index, 1);
+      localStorageService.set(tasksConstant, vm.tasks);
     };
-  });
+  }
 
 }());

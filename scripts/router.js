@@ -1,11 +1,14 @@
 (function () {
   'use strict';
 
-  angular.module('todoApp').config(['$routeProvider', function ($routeProvider) {
+  angular.module('todoApp').config(MyRoute);
+  MyRoute.$inject =  ['$routeProvider'];
+
+  function MyRoute($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/tasks.html',
-        controller: 'TasksController'
+        controller: 'TasksController as tc'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -17,6 +20,5 @@
       .otherwise({
         redirectTo: '/'
       });
-  }]);
-
+  }
 }());

@@ -1,10 +1,15 @@
 (function () {
   'use strict';
 
-  angular.module('todoApp').controller('HeaderController', ['$scope', '$location', function ($scope, $location) {
-    $scope.isActive = function (viewLocation) {
+  angular.module('todoApp').controller('HeaderController', HeaderController);
+  HeaderController.$inject = ['$scope', '$location'];
+
+  function HeaderController($scope, $location) {
+    var vm = this;
+
+    vm.isActive = function (viewLocation) {
       return viewLocation === $location.path();
     };
-  }]);
+  }
 
 }());
