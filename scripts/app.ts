@@ -1,7 +1,7 @@
 /// <reference path="../typings/angularjs/angular.d.ts" />
 /// <reference path="../typings/angularjs/angular-route.d.ts" />
 
-(function () {
+module App {
   'use strict';
 
   angular.module('todoApp', [
@@ -10,4 +10,4 @@
     'LocalStorageModule'
   ]);
 
-}());
+}

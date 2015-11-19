@@ -1,4 +1,5 @@
-(function () {
+var Tasks;
+(function (Tasks) {
     'use strict';
     angular.module('todoApp').controller('TasksController', TasksController);
     TasksController.$inject = ['localStorageService'];
@@ -17,5 +18,5 @@
             localStorageService.set(tasksConstant, vm.tasks);
         };
     }
-}());
+})(Tasks || (Tasks = {}));
 //# sourceMappingURL=tasks.js.map

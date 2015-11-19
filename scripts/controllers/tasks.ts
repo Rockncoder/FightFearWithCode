@@ -1,4 +1,4 @@
-(function () {
+module Tasks {
   'use strict';
 
   angular.module('todoApp').controller('TasksController', TasksController);
@@ -22,5 +22,4 @@
       localStorageService.set(tasksConstant, vm.tasks);
     };
   }
-
-}());
+}
