@@ -1,5 +1,10 @@
-var app = angular.module('todoApp', [
-  'ngAnimate',
-  'ngRoute',
-  'LocalStorageModule'
-]);
+(function () {
+  'use strict';
+
+  angular.module('todoApp', [
+    'ngAnimate',
+    'ngRoute',
+    'LocalStorageModule'
+  ]);
+
+}());

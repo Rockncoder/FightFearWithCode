@@ -1,4 +1,7 @@
-app.controller('TasksController', function ($scope, localStorageService) {
+(function () {
+  'use strict';
+
+  angular.module('todoApp').controller('TasksController', function ($scope, localStorageService) {
     var tasksConstant = 'tasks';
     var tasksStorage = localStorageService.get(tasksConstant);
     $scope.tasks = tasksStorage || [];
@@ -14,3 +17,5 @@ app.controller('TasksController', function ($scope, localStorageService) {
       localStorageService.set(tasksConstant, $scope.tasks);
     };
   });
+
+}());
