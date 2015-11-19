@@ -1,0 +1,36 @@
+{
+  "name": "ffwc",
+  "version": "1.0.0",
+  "description": "Makes an AngularJS app more like Angular 2.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rockncoder/FightFearWithCode.git"
+  },
+  "keywords": [
+    "javascript",
+    "angular",
+    "typescript"
+  ],
+  "author": "Troy Miles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rockncoder/FightFearWithCode/issues"
+  },
+  "homepage": "https://github.com/Rockncoder/FightFearWithCode#readme",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-animate": "^1.4.7",
+    "angular-cookies": "^1.4.7",
+    "angular-local-storage": "^0.2.2",
+    "angular-resource": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "angular-sanitize": "^1.4.7",
+    "angular-touch": "^1.4.7",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4"
+  }
+}
