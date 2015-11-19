@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "styles",
+    "views",
+    "scripts/typings"
+  ],
+  "files": [
+    "scripts/app.ts",
+    "scripts/config.ts",
+    "scripts/router.ts",
+    "scripts/controllers/about.ts",
+    "scripts/controllers/contact.ts",
+    "scripts/controllers/header.ts",
+    "scripts/controllers/tasks.ts"
+  ]
+}
